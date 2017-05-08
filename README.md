@@ -1,4 +1,4 @@
-# libMoment
+# udtMoment
 
 *libMoment* is a *C++* library for parsing, validating, manipulating, and formatting dates. It is heavely inspired in a Javascript library called [moment.js](http://momentjs.com/).
 
@@ -6,7 +6,7 @@ This library is an intend for people who want to learn how to use the type syste
 
 The **type system** in *C++* is very powerful and I have not seen many people using it. Using (correctly) the features of *C++* can help us to **write better, safer and faster code**. 
 
-A library for manipulating dates is a perfect example to show all the benefits of the User-Defined Types (UDT). Many people would use C and C++ primitives to write a library like that (ints, floats, etc). However many errors can be derived if you uses primitives, the compiler would not complain if you write something like this:
+A library for manipulating dates is a perfect example to show all the benefits of the **User-Defined Types (UDT)**. Many people would use C and C++ primitives to write a library like that (ints, floats, etc). However many errors can be derived if you uses primitives, the compiler would not complain if you write something like this:
 
 ```cpp
 auto year = 2017; // Actual year
@@ -36,3 +36,22 @@ using Day = int;
 Date(Month, Day, Year);
 ```
 
+What we want is the compiler checking the types of each parameter:
+
+```cpp
+Day d(15);
+Month m(1);
+Year y(2017);
+
+Date(m, d, y); // Compiles without any problem
+Date(d, m, y); // Error, type of d shuld be Month and type of m should be Day
+```
+
+We could create a class for each type but that would come with an overhead at runtime. The type system let us to take advanteage of the compiler without compromising the runtime.
+
+
+
+## User-Define Types in C++
+
+
+```cpp
