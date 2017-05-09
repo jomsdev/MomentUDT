@@ -1,8 +1,6 @@
-# MomentUDT
+The **type system** in *C++* is very powerful and I have not seen many people using it. Using (correctly) the features of *C++* can help us to **write better, safer and faster code**.
 
-The **type system** in *C++* is very powerful and I have not seen many people using it. Using (correctly) the features of *C++* can help us to **write better, safer and faster code**. 
-
-MomentUDT is a library prototype for people who want to learn how to use the type system of *C++*, learning it from a real world example.
+Let's go to say that we want to implment libMoment, a *C++* library for parsing, validating, manipulating, and formatting dates inspired in [Moment.js](http://momentjs.com/).
 
 A library for manipulating dates is a perfect example to show all the benefits of the **User-Defined Types (UDT)**. Many people would use C and C++ primitives to write a library like that (ints, floats, etc). However many errors can be derived if you uses primitives. The compiler would not be able to complain if you write something like this:
 
